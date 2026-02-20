@@ -1,0 +1,282 @@
+{% extends "base.html" %}
+
+{% block title %}About - Heritage Treasures{% endblock %}
+
+{% block content %}
+<div class="hero-section text-center py-5 mb-5">
+    <div class="container">
+        <h1 class="display-5 fw-bold text-primary mb-4">
+            <i class="fas fa-info-circle me-3"></i>About the Project
+        </h1>
+        <p class="lead mb-4">
+            Heritage Treasures: An In-Depth Analysis of UNESCO World Heritage Sites (2019)
+        </p>
+    </div>
+</div>
+
+<div class="row mb-5">
+    <div class="col-lg-8 mx-auto">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title mb-4">Project Overview</h2>
+                <p class="lead">
+                    This comprehensive project explores the rich dataset of UNESCO World Heritage Sites using 
+                    advanced data visualization techniques in Tableau, integrated with a modern Flask web application.
+                </p>
+                <p>
+                    By leveraging the power of interactive visualizations, stakeholders can gain deeper insights into 
+                    the global heritage landscape, identify patterns, and make informed decisions to enhance the 
+                    preservation and promotion of these invaluable cultural and natural sites.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-5">
+    <div class="col-12">
+        <h2 class="text-center mb-4">
+            <i class="fas fa-chart-bar me-2"></i>Key Visualizations
+        </h2>
+    </div>
+    <div class="col-md-4 mb-4">
+        <div class="card h-100">
+            <div class="card-header bg-primary text-white">
+                <h6 class="mb-0">Scenario 1: Heritage Sites by Country</h6>
+            </div>
+            <div class="card-body">
+                <p class="card-text">
+                    This visualization represents each country as a block, with the size proportional to the 
+                    number of heritage sites it contains. Key columns used: <strong>Country</strong> and <strong>Name_en</strong>.
+                </p>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-check text-success me-2"></i>Quick country comparison</li>
+                    <li><i class="fas fa-check text-success me-2"></i>Visual size representation</li>
+                    <li><i class="fas fa-check text-success me-2"></i>Comprehensive distribution view</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4 mb-4">
+        <div class="card h-100">
+            <div class="card-header bg-danger text-white">
+                <h6 class="mb-0">Scenario 2: Heritage Sites at Risk</h6>
+            </div>
+            <div class="card-body">
+                <p class="card-text">
+                    Pie chart displaying the proportion of UNESCO sites listed as being in danger, segmented into 
+                    'In Danger' and 'Not in Danger' categories. Key columns: <strong>Danger</strong> and <strong>Name_en</strong>.
+                </p>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-check text-success me-2"></i>Risk assessment visualization</li>
+                    <li><i class="fas fa-check text-success me-2"></i>Threat severity analysis</li>
+                    <li><i class="fas fa-check text-success me-2"></i>Conservation priority insights</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4 mb-4">
+        <div class="card h-100">
+            <div class="card-header bg-success text-white">
+                <h6 class="mb-0">Scenario 3: Regional Inscription Trends</h6>
+            </div>
+            <div class="card-body">
+                <p class="card-text">
+                    Line chart showing trends of new site inscriptions over years, segmented by region. 
+                    Key columns: <strong>Date_inscribed</strong> and <strong>Region</strong>.
+                </p>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-check text-success me-2"></i>Temporal analysis</li>
+                    <li><i class="fas fa-check text-success me-2"></i>Regional growth patterns</li>
+                    <li><i class="fas fa-check text-success me-2"></i>Historical trend identification</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-5">
+    <div class="col-md-6 mb-4">
+        <div class="card">
+            <div class="card-header">
+                <h6 class="mb-0">
+                    <i class="fas fa-database me-2"></i>Technical Architecture
+                </h6>
+            </div>
+            <div class="card-body">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h6>Data Collection & Extraction</h6>
+                        <p class="text-muted small mb-2">Dataset sourced from Kaggle UNESCO World Heritage Sites 2019</p>
+                        <div class="progress" style="height: 5px;">
+                            <div class="progress-bar bg-success" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <h6>Data Preparation</h6>
+                        <p class="text-muted small mb-2">Data cleaning and transformation for visualization</p>
+                        <div class="progress" style="height: 5px;">
+                            <div class="progress-bar bg-success" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <h6>Data Visualization</h6>
+                        <p class="text-muted small mb-2">Multiple interactive visualizations created in Tableau</p>
+                        <div class="progress" style="height: 5px;">
+                            <div class="progress-bar bg-success" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <h6>Dashboard & Story</h6>
+                        <p class="text-muted small mb-2">Responsive dashboard and narrative story development</p>
+                        <div class="progress" style="height: 5px;">
+                            <div class="progress-bar bg-success" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <h6>Web Integration</h6>
+                        <p class="text-muted small mb-2">Flask application with embedded Tableau visualizations</p>
+                        <div class="progress" style="height: 5px;">
+                            <div class="progress-bar bg-primary" style="width: 100%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-6 mb-4">
+        <div class="card">
+            <div class="card-header">
+                <h6 class="mb-0">
+                    <i class="fas fa-tachometer-alt me-2"></i>Performance Metrics
+                </h6>
+            </div>
+            <div class="card-body">
+                <div class="row text-center mb-3">
+                    <div class="col-6">
+                        <div class="metric-box">
+                            <h4 class="text-primary mb-1">1,100+</h4>
+                            <small class="text-muted">Data Points</small>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="metric-box">
+                            <h4 class="text-success mb-1">8+</h4>
+                            <small class="text-muted">Visualizations</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-center mb-3">
+                    <div class="col-6">
+                        <div class="metric-box">
+                            <h4 class="text-info mb-1">2</h4>
+                            <small class="text-muted">Dashboards</small>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="metric-box">
+                            <h4 class="text-warning mb-1">4</h4>
+                            <small class="text-muted">Story Scenes</small>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <h6 class="mb-3">Technical Specifications</h6>
+                <ul class="list-unstyled small">
+                    <li><i class="fas fa-check text-success me-2"></i>Interactive filters implemented</li>
+                    <li><i class="fas fa-check text-success me-2"></i>Calculation fields optimized</li>
+                    <li><i class="fas fa-check text-success me-2"></i>Responsive design ensured</li>
+                    <li><i class="fas fa-check text-success me-2"></i>Web integration completed</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-5">
+    <div class="col-12">
+        <div class="card bg-light">
+            <div class="card-body">
+                <h5 class="card-title mb-4">
+                    <i class="fas fa-tools me-2"></i>Technologies Used
+                </h5>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 mb-3">
+                        <div class="text-center">
+                            <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-2" style="width: 60px; height: 60px;">
+                                <i class="fas fa-chart-bar fa-2x"></i>
+                            </div>
+                            <h6>Tableau</h6>
+                            <small class="text-muted">Data Visualization</small>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-3">
+                        <div class="text-center">
+                            <div class="bg-success text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-2" style="width: 60px; height: 60px;">
+                                <i class="fab fa-python fa-2x"></i>
+                            </div>
+                            <h6>Flask</h6>
+                            <small class="text-muted">Web Framework</small>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-3">
+                        <div class="text-center">
+                            <div class="bg-info text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-2" style="width: 60px; height: 60px;">
+                                <i class="fab fa-bootstrap fa-2x"></i>
+                            </div>
+                            <h6>Bootstrap</h6>
+                            <small class="text-muted">UI Framework</small>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-3">
+                        <div class="text-center">
+                            <div class="bg-warning text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-2" style="width: 60px; height: 60px;">
+                                <i class="fas fa-database fa-2x"></i>
+                            </div>
+                            <h6>CSV Data</h6>
+                            <small class="text-muted">Data Source</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h6 class="mb-0">
+                    <i class="fas fa-link me-2"></i>External Resources
+                </h6>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6>Dataset</h6>
+                        <p class="text-muted">
+                            <a href="https://www.kaggle.com/datasets/ujwalkandi/unesco-world-heritage-sites/data?select=whc-sites-2019.csv" target="_blank" class="text-decoration-none">
+                                <i class="fas fa-external-link-alt me-1"></i>
+                                UNESCO World Heritage Sites 2019 - Kaggle
+                            </a>
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <h6>Tableau Public</h6>
+                        <p class="text-muted">
+                            <a href="https://public.tableau.com/views/UNESCOHeritage_17709235698800/Story1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank" class="text-decoration-none">
+                                <i class="fas fa-external-link-alt me-1"></i>
+                                Published Dashboard & Story
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

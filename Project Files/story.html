@@ -1,0 +1,226 @@
+{% extends "base.html" %}
+
+{% block title %}Story - Heritage Treasures{% endblock %}
+
+{% block head %}
+<style>
+.story-container {
+    min-height: 800px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.story-embed {
+    width: 100%;
+    height: 800px;
+    border: none;
+}
+.story-intro {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+.story-chapter {
+    background: #f8f9fa;
+    border-left: 4px solid #007bff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0 8px 8px 0;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="story-intro">
+    <div class="row align-items-center">
+        <div class="col-md-8">
+            <h1 class="mb-3">
+                <i class="fas fa-book-open me-3"></i>UNESCO Heritage Story
+            </h1>
+            <p class="lead mb-0">
+                Journey through the narrative of World Heritage Sites, exploring their historical significance, 
+                conservation challenges, and global importance through an interactive data story.
+            </p>
+        </div>
+        <div class="col-md-4 text-md-end">
+            <div class="badge bg-white text-dark p-2">
+                <i class="fas fa-film me-1"></i>Interactive Story
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header bg-info text-white">
+                <h5 class="mb-0">
+                    <i class="fas fa-list-ol me-2"></i>Story Chapters
+                </h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="story-chapter">
+                            <h6><i class="fas fa-globe me-2"></i>Chapter 1: Global Heritage Landscape</h6>
+                            <p class="mb-0 text-muted small">Introduction to the worldwide distribution of UNESCO sites and their geographic significance.</p>
+                        </div>
+                        <div class="story-chapter">
+                            <h6><i class="fas fa-exclamation-triangle me-2"></i>Chapter 2: Sites in Peril</h6>
+                            <p class="mb-0 text-muted small">Exploring endangered heritage sites and conservation challenges across different regions.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="story-chapter">
+                            <h6><i class="fas fa-chart-line me-2"></i>Chapter 3: Historical Trends</h6>
+                            <p class="mb-0 text-muted small">Analysis of inscription patterns and the evolution of heritage recognition over time.</p>
+                        </div>
+                        <div class="story-chapter">
+                            <h6><i class="fas fa-handshake me-2"></i>Chapter 4: Conservation Future</h6>
+                            <p class="mb-0 text-muted small">Future outlook and strategies for preserving our global heritage for generations to come.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">
+                    <i class="fas fa-book-reader me-2"></i>Interactive Story Experience
+                </h5>
+                <div>
+                    <button class="btn btn-sm btn-outline-info" onclick="refreshStory()">
+                        <i class="fas fa-sync-alt me-1"></i>Refresh
+                    </button>
+                    <button class="btn btn-sm btn-outline-secondary" onclick="toggleStoryFullscreen()">
+                        <i class="fas fa-expand me-1"></i>Fullscreen
+                    </button>
+                </div>
+            </div>
+            <div class="card-body p-0">
+                <div class="story-container">
+                    <iframe 
+                        class="story-embed"
+                        src="https://public.tableau.com/views/UNESCOHeritage_17709235698800/Story1?:embed=yes&:display_count=yes&:showVizHome=no"
+                        frameborder="0">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h6 class="mb-0">
+                    <i class="fas fa-lightbulb me-2"></i>Key Insights
+                </h6>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12 mb-3">
+                        <div class="d-flex align-items-start">
+                            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px; flex-shrink: 0;">
+                                <i class="fas fa-chart-pie"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Distribution Patterns</h6>
+                                <p class="mb-0 text-muted small">Understanding how heritage sites are distributed across continents and countries reveals cultural and historical priorities.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <div class="d-flex align-items-start">
+                            <div class="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px; flex-shrink: 0;">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Conservation Urgency</h6>
+                                <p class="mb-0 text-muted small">Identifying at-risk sites helps prioritize international conservation efforts and resource allocation.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="d-flex align-items-start">
+                            <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px; flex-shrink: 0;">
+                                <i class="fas fa-history"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Historical Evolution</h6>
+                                <p class="mb-0 text-muted small">Tracking inscription trends shows how global awareness of heritage preservation has evolved over decades.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <h6 class="mb-0">
+                    <i class="fas fa-info-circle me-2"></i>Story Navigation
+                </h6>
+            </div>
+            <div class="card-body">
+                <p class="small text-muted mb-3">
+                    Use the navigation controls within the Tableau story to move between chapters and explore different aspects of UNESCO heritage data.
+                </p>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-outline-primary btn-sm" onclick="goToChapter(1)">
+                        <i class="fas fa-arrow-left me-1"></i>Previous Chapter
+                    </button>
+                    <button class="btn btn-outline-primary btn-sm" onclick="goToChapter(2)">
+                        Next Chapter<i class="fas fa-arrow-right ms-1"></i>
+                    </button>
+                </div>
+                <hr>
+                <div class="text-center">
+                    <small class="text-muted">
+                        <i class="fas fa-mouse me-1"></i>Click and drag to navigate<br>
+                        <i class="fas fa-search-plus me-1"></i>Use controls to zoom
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+function refreshStory() {
+    const iframe = document.querySelector('.story-embed');
+    const src = iframe.src;
+    iframe.src = src;
+}
+
+function toggleStoryFullscreen() {
+    const container = document.querySelector('.story-container');
+    if (!document.fullscreenElement) {
+        container.requestFullscreen().catch(err => {
+            console.log(`Error attempting to enable fullscreen: ${err.message}`);
+        });
+    } else {
+        document.exitFullscreen();
+    }
+}
+
+function goToChapter(direction) {
+    // This would typically interact with the Tableau story API
+    // For now, we'll just show an alert
+    const message = direction === 1 ? 'Navigate to previous chapter' : 'Navigate to next chapter';
+    console.log(message);
+    // In a real implementation, you would use Tableau's JavaScript API
+}
+</script>
+{% endblock %}
